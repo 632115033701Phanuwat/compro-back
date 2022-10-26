@@ -11,7 +11,7 @@ import se331.rest.repository.EventRepository;
 
 import java.util.List;
 
-@Profile("prod")
+@Profile("db")
 @Repository
 public class EventDaoDbImpl implements EventDao {
     @Autowired

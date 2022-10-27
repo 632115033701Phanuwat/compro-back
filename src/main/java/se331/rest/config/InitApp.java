@@ -44,8 +44,8 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
                 .name("ChiangMai").build());
         Event tempEvent = null;
         tempEvent = eventRepository.save(Event.builder()
-                .category("Academic")
-                .title("Midterm Exam")
+                .vaccine("Academic")
+                .Name("Dr.Chatchat Sitthiphan")
                 .description("A time for taking the exam")
                 .location("CAMT Building")
                 .date("3rd Sept")
@@ -55,8 +55,8 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
                 .build());
         org1.getOwnEvents().add(tempEvent);
         tempEvent = eventRepository.save(Event.builder()
-                .category("Academic")
-                .title("Commencement Day")
+                .vaccine("Academic")
+                .Name("Nattaparin Somnuek")
                 .description("A time for celebration")
                 .location("CMU Convention hall")
                 .date("21th Jan")
@@ -66,8 +66,8 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
                 .build());
         org1.getOwnEvents().add(tempEvent);
         tempEvent = eventRepository.save(Event.builder()
-                .category("Cultural")
-                .title("Loy Krathong")
+                .vaccine("Cultural")
+                .Name("Aranya Barameemahasan ")
                 .description("A time for Krathong")
                 .location("Ping River")
                 .date("21th Nov")
@@ -77,8 +77,8 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
                 .build());
         org2.getOwnEvents().add(tempEvent);
         tempEvent = eventRepository.save(Event.builder()
-                .category("Cultural")
-                .title("Songkran")
+                .vaccine("Cultural")
+                .Name("Prayut Chan-o-cha")
                 .description("Let's Play Water")
                 .location("Chiang Mai Moat")
                 .date("13th April")

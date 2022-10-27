@@ -23,14 +23,14 @@ public class EventController {
     @GetMapping("event")
     public ResponseEntity<?> getEventLists(@RequestParam(value = "_limit", required = false) Integer perPage
             , @RequestParam(value = "_page", required = false) Integer page
-            , @RequestParam(value = "title", required = false) String title) {
+            , @RequestParam(value = "title", required = false) String Name) {
         perPage = perPage == null ? 3 : perPage;
         page = page == null ? 1 : page;
         Page<Event> pageOutput;
-        if (title == null) {
+        if (Name == null) {
             pageOutput = eventService.getEvents(perPage, page);
         } else {
-            pageOutput = eventService.getEvents(title, PageRequest.of(page - 1, perPage));
+            pageOutput = eventService.getEvents(Name, PageRequest.of(page - 1, perPage));
         }
         HttpHeaders responseHeader = new HttpHeaders();
 

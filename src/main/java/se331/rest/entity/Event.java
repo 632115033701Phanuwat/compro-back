@@ -16,8 +16,8 @@ public class Event {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Exclude
     Long id;
-    String category;
-    String title;
+    String vaccine;
+    String Name;
     String description;
     String location;
     String date;

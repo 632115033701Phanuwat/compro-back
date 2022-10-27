@@ -13,8 +13,8 @@ import java.util.List;
 @AllArgsConstructor
 public class OrganizerOwnEventsDTO {
     Long id;
-    String category;
-    String title;
+    String vaccine;
+    String Name;
     String description;
     String location;
     String date;

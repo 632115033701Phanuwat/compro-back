@@ -26,6 +26,7 @@ public class EventDTO {
     String time;
     String time1;
     String time2;
+    String addimg;
     Boolean petAllowed;
     EventOrganizerDTO organizer;
     List<String> imageUrls;

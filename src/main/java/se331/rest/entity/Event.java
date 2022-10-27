@@ -29,6 +29,7 @@ public class Event {
     String time;
     String time1;
     String time2;
+    String addimg;
     Boolean petAllowed;
     @ManyToOne
     Organizer organizer;

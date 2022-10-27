@@ -20,7 +20,7 @@ public class Event {
     String vaccine1;
     String vaccine2;
     String name;
-    String Age;
+    String age;
     String description;
     String location;
     String date;

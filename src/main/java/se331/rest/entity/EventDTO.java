@@ -16,12 +16,13 @@ public class EventDTO {
     String vaccine;
     String vaccine1;
     String vaccine2;
-    String Name;
+    String name;
+    String Age;
     String description;
     String location;
     String date;
     String date1;
-    String date02;
+    String date2;
     String time;
     String time1;
     String time2;

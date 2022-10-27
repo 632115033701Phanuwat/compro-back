@@ -19,7 +19,8 @@ public class Event {
     String vaccine;
     String vaccine1;
     String vaccine2;
-    String Name;
+    String name;
+    String Age;
     String description;
     String location;
     String date;

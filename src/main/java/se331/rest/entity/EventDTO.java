@@ -14,11 +14,17 @@ import java.util.List;
 public class EventDTO {
     Long id;
     String vaccine;
+    String vaccine1;
+    String vaccine2;
     String Name;
     String description;
     String location;
     String date;
+    String date1;
+    String date02;
     String time;
+    String time1;
+    String time2;
     Boolean petAllowed;
     EventOrganizerDTO organizer;
     List<String> imageUrls;

@@ -18,14 +18,7 @@ public class EventDTO {
     String vaccine2;
     String name;
     String age;
-    String description;
     String location;
-    String date;
-    String date1;
-    String date2;
-    String time;
-    String time1;
-    String time2;
     String addimg;
     Boolean petAllowed;
     EventOrganizerDTO organizer;

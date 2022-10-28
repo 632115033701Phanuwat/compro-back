@@ -8,6 +8,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 import se331.rest.entity.Event;
 import se331.rest.entity.Organizer;
+import se331.rest.repository.CommentRepository;
 import se331.rest.repository.EventRepository;
 import se331.rest.repository.OrganizerRepository;
 import se331.rest.security.entity.Authority;
@@ -28,6 +29,10 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
 
     @Autowired
     OrganizerRepository organizerRepository;
+
+    @Autowired
+    CommentRepository commentRepository;
+
     @Autowired
     AuthorityRepository authorityRepository;
     @Autowired

@@ -4,6 +4,7 @@ package se331.rest.entity;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -37,6 +38,10 @@ public class Event {
     List<Participant> participants;
     @ElementCollection
     List<String> imageUrls;
+
+    @OneToMany
+    @Builder.Default
+    List<Comment> commentsList = new ArrayList<>();
 
 
 }

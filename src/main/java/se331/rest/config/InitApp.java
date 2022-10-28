@@ -37,11 +37,11 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
     public void onApplicationEvent(ApplicationReadyEvent applicationReadyEvent) {
         Organizer org1, org2, org3;
         org1 = organizerRepository.save(Organizer.builder()
-                .name("CAMT").build());
+                .name("Dr. Robert Rey").build());
         org2 = organizerRepository.save(Organizer.builder()
-                .name("CMU").build());
+                .name("Dr. Leonard Hochstein").build());
         org3 = organizerRepository.save(Organizer.builder()
-                .name("ChiangMai").build());
+                .name("Dr. Terry Dubrow").build());
         Event tempEvent = null;
         tempEvent = eventRepository.save(Event.builder()
                 .vaccine("sinopharm")
@@ -55,9 +55,9 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
                 .date("3-2-2021")
                 .date1("6-5-2021")
                 .date2("15-9-2021")
-                .time("3.00-4.00 pm.")
-                .time1("3.00-4.00 pm.")
-                .time2("3.00-4.00 pm.")
+                .time("7.00 am.")
+                .time1("11.00 pm.")
+                .time2("2.00 pm.")
                 .petAllowed(false)
                 .organizer(org1)
                 .build());
@@ -74,9 +74,9 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
                 .date("6-3-2021")
                 .date1("12-7-2021")
                 .date2("2-1-2021")
-                .time("8.00am-4.00 pm.")
-                .time1("8.00am-4.00 pm.")
-                .time2("8.00am-4.00 pm.")
+                .time("8.00 am.")
+                .time1("11.00 pm.")
+                .time2("9.00 am.")
                 .petAllowed(false)
                 .organizer(org1)
                 .build());
@@ -93,9 +93,9 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
                 .date("21-5-2021")
                 .date1("5-9-2021")
                 .date2("8-2-2022")
-                .time("8.00-10.00 pm.")
-                .time1("8.00-10.00 pm.")
-                .time2("8.00-10.00 pm.")
+                .time("1.00 pm.")
+                .time1("9.00 am.")
+                .time2("8.00 am.")
                 .organizer(org2)
                 .petAllowed(false)
                 .build());
@@ -112,9 +112,9 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
                 .date("13-7-2021")
                 .date1("20-11-2021")
                 .date2("9-3-2021")
-                .time("10.00am - 6.00 pm.")
-                .time1("10.00am - 6.00 pm.")
-                .time2("10.00am - 6.00 pm.")
+                .time("4.00 pm.")
+                .time1("10.00 am.")
+                .time2("8.00 am.")
                 .petAllowed(true)
                 .organizer(org3)
                 .build());

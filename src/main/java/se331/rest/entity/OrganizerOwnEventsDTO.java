@@ -17,7 +17,6 @@ public class OrganizerOwnEventsDTO {
     String age;
     String description;
     String location;
-    String addimg;
     Boolean petAllowed;
     List<Participant> participants;
 }

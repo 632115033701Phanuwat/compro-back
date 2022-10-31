@@ -42,6 +42,8 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
     @Transactional
     public void onApplicationEvent(ApplicationReadyEvent applicationReadyEvent) {
         Comment comment = null;
+        Event tempEvent = null;
+
         Organizer org1, org2, org3, org4;
         org1 = organizerRepository.save(Organizer.builder()
                 .name("Dr. Robert Rey").build());
@@ -51,7 +53,7 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
                 .name("Dr. Terry Dubrow").build());
         org4 = organizerRepository.save(Organizer.builder()
                 .name("Admin").build());
-        Event tempEvent = null;
+
         tempEvent = eventRepository.save(Event.builder()
                 .vaccine("sinopharm")
                 .vaccine1("astrazeneca")
@@ -64,6 +66,7 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
                 .organizer(org1)
                 .build());
         comment = commentRepository.save(Comment.builder().comment("show time").name("aa").build());
+        tempEvent.getCommentList().add(comment);
         org1.getOwnEvents().add(tempEvent);
         tempEvent = eventRepository.save(Event.builder()
                 .vaccine("astrazeneca")
@@ -77,6 +80,7 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
                 .organizer(org1)
                 .build());
         comment = commentRepository.save(Comment.builder().comment("show time").name("a").build());
+        tempEvent.getCommentList().add(comment);
         org1.getOwnEvents().add(tempEvent);
         tempEvent = eventRepository.save(Event.builder()
                 .vaccine("astrazeneca")
@@ -90,6 +94,7 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
                 .petAllowed(false)
                 .build());
         comment = commentRepository.save(Comment.builder().comment("show time").name("b").build());
+        tempEvent.getCommentList().add(comment);
         org2.getOwnEvents().add(tempEvent);
         tempEvent = eventRepository.save(Event.builder()
                 .vaccine("sinovac")
@@ -103,6 +108,7 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
                 .organizer(org3)
                 .build());
         comment = commentRepository.save(Comment.builder().comment("show time").name("c").build());
+        tempEvent.getCommentList().add(comment);
         org3.getOwnEvents().add(tempEvent);
         addUser();
         org1.setUser(user4);

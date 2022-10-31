@@ -42,13 +42,19 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
     @Transactional
     public void onApplicationEvent(ApplicationReadyEvent applicationReadyEvent) {
         Comment comment = null;
-        Organizer org1, org2, org3;
+        Organizer org1, org2, org3, org4, org5,org6;
         org1 = organizerRepository.save(Organizer.builder()
                 .name("Dr. Robert Rey").build());
         org2 = organizerRepository.save(Organizer.builder()
                 .name("Dr. Leonard Hochstein").build());
         org3 = organizerRepository.save(Organizer.builder()
                 .name("Dr. Terry Dubrow").build());
+        org4 = organizerRepository.save(Organizer.builder()
+                .name("admin").build());
+        org5 = organizerRepository.save(Organizer.builder()
+                .name("user1").build());
+        org6 = organizerRepository.save(Organizer.builder()
+                .name("user2").build());
         Event tempEvent = null;
         tempEvent = eventRepository.save(Event.builder()
                 .vaccine("sinopharm")
@@ -109,6 +115,13 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
         user5.setOrganizer(org2);
         org3.setUser(user6);
         user6.setOrganizer(org3);
+        org4.setUser(user1);
+        user1.setOrganizer(org4);
+        org5.setUser(user2);
+        user2.setOrganizer(org5);
+        org6.setUser(user3);
+        user3.setOrganizer(org6);
+
     }
 
     User user1,user2,user3,user4,user5,user6;

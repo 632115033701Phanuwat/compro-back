@@ -23,6 +23,6 @@ public class EventDTO {
     Boolean petAllowed;
     EventOrganizerDTO organizer;
     List<String> imageUrls;
-    List<CommentDTO> comment;
+    List<CommentDTO> commentList;
 }
 

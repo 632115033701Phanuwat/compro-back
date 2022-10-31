@@ -32,7 +32,7 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
     OrganizerRepository organizerRepository;
 
     @Autowired
-    CommentRepository commentRepository;
+    CommentRepository coommentRepository;
 
     @Autowired
     AuthorityRepository authorityRepository;
@@ -65,7 +65,7 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
                 .petAllowed(false)
                 .organizer(org1)
                 .build());
-        comment = commentRepository.save(Comment.builder().comment("show time").name("aa").build());
+        comment = coommentRepository.save(Comment.builder().comment("show time").name("aa").build());
         tempEvent.getCommentList().add(comment);
         org1.getOwnEvents().add(tempEvent);
         tempEvent = eventRepository.save(Event.builder()
@@ -79,7 +79,7 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
                 .petAllowed(false)
                 .organizer(org1)
                 .build());
-        comment = commentRepository.save(Comment.builder().comment("show time").name("a").build());
+        comment = coommentRepository.save(Comment.builder().comment("show time").name("a").build());
         tempEvent.getCommentList().add(comment);
         org1.getOwnEvents().add(tempEvent);
         tempEvent = eventRepository.save(Event.builder()
@@ -93,7 +93,7 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
                 .organizer(org2)
                 .petAllowed(false)
                 .build());
-        comment = commentRepository.save(Comment.builder().comment("show time").name("b").build());
+        comment = coommentRepository.save(Comment.builder().comment("show time").name("b").build());
         tempEvent.getCommentList().add(comment);
         org2.getOwnEvents().add(tempEvent);
         tempEvent = eventRepository.save(Event.builder()
@@ -107,7 +107,7 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
                 .petAllowed(true)
                 .organizer(org3)
                 .build());
-        comment = commentRepository.save(Comment.builder().comment("show time").name("c").build());
+        comment = coommentRepository.save(Comment.builder().comment("show time").name("c").build());
         tempEvent.getCommentList().add(comment);
         org3.getOwnEvents().add(tempEvent);
         addUser();

@@ -34,7 +34,7 @@ public class Event {
 
     @OneToMany
     @Builder.Default
-    List<Comment> commentsList = new ArrayList<>();
+    List<Comment> commentList = new ArrayList<>();
 
 
 }

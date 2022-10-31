@@ -19,15 +19,15 @@ public class CommentController {
     @Autowired
     EventService eventService;
 
-    @GetMapping("/comment")
+    @GetMapping("/comments")
     ResponseEntity<?> getComments(){
         return ResponseEntity.ok(LabMapper.INSTANCE.getCommentDTO(commentService.getAllComment()));
     }
 
-    @PostMapping("/comment/event/{id}")
+    @PostMapping("/comments/event/{id}")
     ResponseEntity<?> addComment(@PathVariable("id") Long id,@RequestBody Comment comment){
         Event output = eventService.getEvent(id);
-        output.getCommentsList().add(comment);
+        output.getCommentList().add(comment);
         Comment outcomment = commentService.save(comment);
         return ResponseEntity.ok(LabMapper.INSTANCE.getCommentDTO(outcomment));
     }

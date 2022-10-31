@@ -51,10 +51,10 @@ public class WebSecurityConfig {
                 .antMatchers(HttpMethod.GET,"/event").permitAll()
                 .antMatchers(HttpMethod.GET,"/organizers").permitAll()
                 .antMatchers(HttpMethod.GET,"/register").permitAll()
-                .antMatchers(HttpMethod.GET,"/comment").hasRole("DOCTOR")
+                .antMatchers(HttpMethod.GET,"/comments").hasRole("DOCTOR")
                 .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                 .antMatchers(HttpMethod.POST,"/event").hasRole("ADMIN")
-                .antMatchers(HttpMethod.POST,"/comment").hasRole("DOCTOR")
+                .antMatchers(HttpMethod.POST,"/comments").hasRole("DOCTOR")
                 .anyRequest()
                 .authenticated();
         http.addFilterBefore(tokenFilter, UsernamePasswordAuthenticationFilter.class);

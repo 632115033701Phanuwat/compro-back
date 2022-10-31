@@ -18,7 +18,7 @@ public class Lab08Application {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins("http://localhost:3000","http://52.54.108.39:8001")
+                        .allowedOrigins("http://localhost:3000","http://50.19.197.106:8001")
                         .exposedHeaders("x-total-count");
 
             }
